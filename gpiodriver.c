@@ -21,7 +21,10 @@ static int __init GpioInit(void) {
 	else printk("No ERROR GPIO %d request\n", GPIO_21);
 	  
   	gpio_direction_output(GPIO_21, 0);
+  	printk("GPIO Direction Set Output");
 
+  	gpio_set_value(GPIO_21, 1);
+  	printk("GPIO Set Value High");
 	return 0;
 }
 
